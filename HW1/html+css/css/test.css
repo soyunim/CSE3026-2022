@@ -33,7 +33,7 @@ header{
 }
 .menu{
   margin-left:20px;
-  max-width:20%;
+width:400px;
 }
 .menu, .siteurl ul{
     padding-left:20px;
