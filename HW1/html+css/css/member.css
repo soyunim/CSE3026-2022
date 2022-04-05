@@ -1,26 +1,71 @@
-.content1{
-    display:flex;
-    width:100%-550px;
-    margin-left:550px;
-    min-height:825px;
-    padding-right:40px;
-    padding-left:50px;
+.yoon_img{
+  position:relative;
+  width:35%;
+  background-image: url("../img/yoon.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float:left;
+}
+.yang_img{
+  position:relative;
+  width:35%;
+  background-image: url("../img/yang.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float:left;
+}
+.lee_img{
+  position:relative;
+  width:35%;
+  background-image: url("../img/lee.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float:left;
+}
+.son_img{
+  position:relative;
+  width:35%;
+  background-image: url("../img/son.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float:left;
+}
+
+
+.mem_content{
+  display:flex;
+  width:100%;
+  margin:0;
+  justify-content: space-between;
+  height:100%;
+}
+.mem_blocks{
+  width:30%;
+  padding-right:45px;
+  height:100%;
+  margin-left:5%;
 }
 .information{
-    padding-top:80px;
-    width:510px;
+  width:65%;
+  padding-left:45px;
 }
-.content-line{
-    margin-top:80px;
-    position:absolute;
-    right:32px;
+.mem_block{
+  width:100%;
+  height:100%;
+  overflow: hidden;
 }
-.line1-1{
-    display:flex;
-}
-.line2-1{
-    display:flex;
-    padding-top:20px;
+.mem_line{
+  padding-left: 0;
+  justify-content: right;
+  width:100%;
 }
 
 .info1, .info1 dl, .siteurl1, .info2 dl{
@@ -38,12 +83,12 @@
 .info1 dd{
     font-weight: lighter;
     font-size:16px;
-    margin-left:10px;
+    margin-left:20px;
     color:#767676;
 }
 .siteurl1{
     padding:0;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .siteurl1 li{
     margin-right:5px;
@@ -51,16 +96,17 @@
 
 .info2 dl{
     margin:0;
+    margin-top:3px;
     margin-bottom:5px;
     font-size:15px;
 }
 .info2 dt{
-    color: #5c5c5c;
-    font-weight:normal;
+    color: #6c6c6c;
+    font-weight:bold;
 }
 .info2 dd{
     font-weight: lighter;
-    margin-left:20px;
+    margin-left:30px;
     color: #5c5c5c;
 }
 
@@ -70,11 +116,15 @@
 .info3 h4{
     margin:0;
     margin-top:30px;
+    color:#5c5c5c98;
 }
 .info3 dl{
-    padding-left:10px;
-    font-size:15px;
+    padding-left:5%;
     margin-top:10px;
+}
+.info3 dt{
+  font-weight:bold;
+  font-size:15px;
 }
 .info3 dd{
     padding-left:5px;
