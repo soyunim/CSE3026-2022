@@ -21,6 +21,7 @@ ul, li, ol{
   top:20px;
   left:5%;
   align-items: center;
+  justify-content: center;
 }
 .header2{
   width:100%;
