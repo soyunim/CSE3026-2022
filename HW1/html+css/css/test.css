@@ -15,24 +15,28 @@ ul, li, ol{
   background-repeat: no-repeat;
   background-size: cover;
 }
-header{
+.header1{
+  position:absolute;
+  display:flex;
+  top:20px;
+  left:5%;
+  align-items: center;
+}
+.header2{
   width:100%;
   position:absolute;
-  top:0;
-  padding-top:2%;
-  padding-left:3%;
-  padding-right:3%;
+  top:45px;
+  left:45px;
   display:flex;
   align-items: center;
 }
 .logo{
-  width:8%;
+  width:140px;
 }
 .logo img{
   width:140px;
 }
 .menu{
-  margin-left:30px;
   width:400px;
 }
 .menu, .siteurl ul{
@@ -75,7 +79,7 @@ header{
 /* header-siteurl */
 .siteurl{
     position:absolute;
-    right:9%;
+    right:80px;
 }
 .siteurl ul{
     display:flex;
