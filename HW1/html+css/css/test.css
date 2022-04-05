@@ -63,14 +63,13 @@ width:400px;
     border-bottom-color:#c9c9c9;
     background-color: #c9c9c900;
 }
-.search button{
-    border:none;
+.search a{
     padding:0;
 }
-.search button:hover{
+.search a:hover{
     cursor:pointer;
 }
-.search button img{
+.search img{
     width:18px;
 }
 /* header-siteurl */
