@@ -26,10 +26,10 @@ ul, li, ol{
   width:90%;
 }
 .header2{
-  width:100%;
+  left:35%;
+  width:65%;
   position:absolute;
   top:45px;
-  left:45px;
   display:flex;
   align-items: center;
 }
@@ -60,7 +60,7 @@ ul, li, ol{
 
 .search{
     position: absolute;
-    left:35%;
+    left:40px;
 }
 .search input{
     font-size:15px;
@@ -82,7 +82,7 @@ ul, li, ol{
 /* header-siteurl */
 .siteurl{
     position:absolute;
-    right:80px;
+    right:45px;
 }
 .siteurl ul{
     display:flex;
@@ -93,7 +93,6 @@ ul, li, ol{
 .siteurl img, .siteurl1 img{
     height:18px;
 }
-
 
 .content{
     position:absolute;
@@ -185,7 +184,8 @@ iframe, .content-media{
 }
 .content-sns{
     margin:0;
-    height:200px;
+    width:100%;
+    height:180px;
 }
 .sns-block{
   margin-right: 2%;
