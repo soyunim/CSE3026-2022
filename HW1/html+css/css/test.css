@@ -98,7 +98,7 @@ ul, li, ol{
     position:absolute;
     left:35%;
     width:65%;
-    top:90px;
+    padding-top:90px;
 }
 .line1, .line2, .line3{
   padding-right:40px;
@@ -106,9 +106,10 @@ ul, li, ol{
   display:flex;
   align-items: flex-start;
   justify-content: center;
+  height:30%;
 }
 .line2, .line3{
-  padding-top:5%;
+  padding-top:35px;
 }
 .content-title{
     margin:0 10px;
@@ -135,7 +136,7 @@ ul, li, ol{
 iframe, .content-media{
     border:none;
     width:100%;
-    height:200px;
+    height:180px;
 }
 .content-media, .content-sns{
     background-color: #c9c9c949;
@@ -185,7 +186,6 @@ iframe, .content-media{
 .content-sns{
     margin:0;
     width:100%;
-    height:180px;
 }
 .sns-block{
   margin-right: 2%;
