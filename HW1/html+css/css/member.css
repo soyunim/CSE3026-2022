@@ -1,0 +1,84 @@
+.content1{
+    display:flex;
+    width:100%-550px;
+    margin-left:550px;
+    min-height:825px;
+    padding-right:40px;
+    padding-left:50px;
+}
+.information{
+    padding-top:80px;
+    width:510px;
+}
+.content-line{
+    margin-top:80px;
+    position:absolute;
+    right:32px;
+}
+.line1-1{
+    display:flex;
+}
+.line2-1{
+    display:flex;
+    padding-top:20px;
+}
+
+.info1, .info1 dl, .siteurl1, .info2 dl{
+    display:flex;
+}
+.info1 dl, .siteurl1{
+    margin-top:0;
+    margin-bottom:5px;
+}
+.info1 dt{
+    font-size:18px;
+    font-weight:bold;
+    color:#5c5c5c;
+}
+.info1 dd{
+    font-weight: lighter;
+    font-size:16px;
+    margin-left:10px;
+    color:#767676;
+}
+.siteurl1{
+    padding:0;
+    margin-left: 10px;
+}
+.siteurl1 li{
+    margin-right:5px;
+}
+
+.info2 dl{
+    margin:0;
+    margin-bottom:5px;
+    font-size:15px;
+}
+.info2 dt{
+    color: #5c5c5c;
+    font-weight:normal;
+}
+.info2 dd{
+    font-weight: lighter;
+    margin-left:20px;
+    color: #5c5c5c;
+}
+
+.info3{
+    color:#5c5c5c;
+}
+.info3 h4{
+    margin:0;
+    margin-top:30px;
+}
+.info3 dl{
+    padding-left:10px;
+    font-size:15px;
+    margin-top:10px;
+}
+.info3 dd{
+    padding-left:5px;
+    margin-bottom:2px;
+    font-size:15px;
+    font-weight: lighter;
+}
