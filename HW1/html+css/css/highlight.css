@@ -71,14 +71,11 @@ header{
     height:18px;
 }
 
-
 /* mainimage */
 .mainimage img, .yoonimage img, .yangimage img, .leeimage img, .sonimage img{
-    max-width: 550px;
-    height:auto;
+    height:100%;
     float:left;
 }
-
 /* contents */
 .content{
     width:100%-550px;
