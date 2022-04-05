@@ -33,10 +33,10 @@ header{
 }
 .menu{
   margin-left:20px;
-  width:20%;
+  max-width:20%;
 }
 .menu, .siteurl ul{
-    padding-left:30px;
+    padding-left:20px;
 }
 .menu li{
     display: inline-block;
