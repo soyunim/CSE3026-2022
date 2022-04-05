@@ -98,6 +98,7 @@ ul, li, ol{
     position:absolute;
     left:35%;
     width:65%;
+    height:90%;
     padding-top:90px;
 }
 .line1, .line2, .line3{
@@ -128,6 +129,7 @@ ul, li, ol{
 
 .block1, .block2, .block3{
   width:33%;
+  height:100%;
   overflow: hidden;
 }
 .block2{
@@ -136,7 +138,7 @@ ul, li, ol{
 iframe, .content-media{
     border:none;
     width:100%;
-    height:180px;
+    height:100%;
 }
 .content-media, .content-sns{
     background-color: #c9c9c949;
@@ -148,7 +150,7 @@ iframe, .content-media{
   overflow: hidden;
 }
 .content-media img{
-  width:110%;
+  height:100%;
 }
 .content-media ul{
     padding:0;
@@ -178,12 +180,17 @@ iframe, .content-media{
   overflow:scroll;
   overflow-x:hidden;
 }
+.line3-1{
+  height:100%;
+}
 .line3-content{
   display:flex;
   align-items: flex-start;
   justify-content: center;
+  height:80%;
 }
 .content-sns{
+    height:80%;
     margin:0;
     width:100%;
 }
