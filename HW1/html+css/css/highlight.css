@@ -9,6 +9,7 @@ body,html{
 ul, li, ol{
     list-style:none;
 }
+/*-----image-----*/
 .index_img{
   position:relative;
   width:35%;
@@ -19,6 +20,8 @@ ul, li, ol{
   background-size: cover;
   float:left;
 }
+
+/*-----header-----*/
 .header1{
   position:absolute;
   display:flex;
@@ -97,6 +100,8 @@ ul, li, ol{
     height:18px;
 }
 
+
+/*-----content-----*/
 .content{
     position:absolute;
     left:35%;
@@ -172,6 +177,11 @@ iframe, .content-media{
     margin:0;
     padding: 10px 5px;
 }
+.content-media dt a{
+  font-size: 16px;
+  font-weight: 800;
+    color:#5c5c5c;
+}
 .content-media dt{
     font-size: 16px;
     font-weight: 800;
@@ -184,9 +194,9 @@ iframe, .content-media{
     display:inline-block;
 }
 .history{
-  overflow:scroll;
-  overflow-x:hidden;
+  overflow-y:auto;
 }
+/*-----content(sns)-----*/
 .line3-1{
   height:90%;
 }

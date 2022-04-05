@@ -1,3 +1,4 @@
+/*-----image-----*/
 .yoon_img{
   position:relative;
   width:35%;
@@ -39,7 +40,7 @@
   float:left;
 }
 
-
+/*-----content-----*/
 .mem_content{
   display:flex;
   width:100%;
@@ -47,15 +48,12 @@
   justify-content: space-between;
   height:100%;
 }
+/*-----content(right)-----*/
 .mem_blocks{
   width:30%;
   padding-right:45px;
   height:100%;
   margin-left:5%;
-}
-.information{
-  width:65%;
-  padding-left:45px;
 }
 .mem_block{
   width:100%;
@@ -66,6 +64,11 @@
   padding-left: 0;
   justify-content: right;
   width:100%;
+}
+/*-----content(left)-----*/
+.information{
+  width:65%;
+  padding-left:45px;
 }
 
 .info1, .info1 dl, .siteurl1, .info2 dl{
@@ -109,9 +112,9 @@
     margin-left:30px;
     color: #5c5c5c;
 }
-
 .info3{
     color:#5c5c5c;
+    height:80%;
 }
 .info3 h4{
     margin:0;
@@ -121,6 +124,8 @@
 .info3 dl{
     padding-left:5%;
     margin-top:10px;
+    height:100%;
+    overflow-y: auto;
 }
 .info3 dt{
   font-weight:bold;
