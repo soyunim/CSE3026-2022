@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Font;
+    src: url(data/neodgm.ttf);
+  }
+*{
+
+    font-family:Font;
+}
+body { 
+    padding: 0;
+    margin: auto 0;
+} 
+#container{
+    width:100%;
+
+}
+#main, #game, #howto, #result{
+    width:1200px;
+    height:800px;
+    margin:0 auto;
+    background-color: rgba(255,200,0,0.3);
+}
+#howto,#game,#result{
+    display:none;
+}
+
+/* Start Page */
+.title{
+    margin: auto 0;
+    text-align: center;
+    font-size: 80px;
+    padding-top: 100px;
+}
+.title_img{
+    margin-top:20px;
+    width:500px; 
+    height:380px;
+    margin-left:350px;
+    margin-right:350px;
+}
+.title_img2{
+    margin-top:20px;
+    width:501px; 
+    height:380px;
+    margin-left:349px;
+    margin-right:350px;
+    display:none;
+}
+.mainBtn{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.startBtn, .howToBtn{
+    margin-bottom:10px;
+    cursor:pointer;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 45px;
+}
+.startBtn:hover, .howToBtn:hover{
+    color:rgba(255,150,0,1);
+}
+.howToBtn{
+
+}
+
+/* game */
+.header{
+    height:60px;
+    display:flex;
+    justify-content: space-between;
+    margin: auto 50px;
+    padding-top: 30px;
+    font-size:15px;
+}
+.eliment1 th, .eliment2 th, .eliment3 th{
+    font-size: 15px;
+}
+td{
+    width: 10px;
+    background: black;
+}
+.date{
+    font-size: 30px;
+    display:flex;
+}
+.date p{
+    margin:0;
+}
+.gameimg{
+    height:400px;
+}
+.communication{
+    display:flex;
+    justify-content: center;
+    margin:auto;
+    width:1100px;
+    height:250px;
+    border: solid rgba(255,150,0,0.0) 5px;
+    border-radius: 1em;
+    background-color:rgba(255, 255, 255, 0.5);
+}
