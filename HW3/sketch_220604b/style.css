@@ -78,6 +78,9 @@ body {
     padding-top: 30px;
     font-size:15px;
 }
+.header table{
+    height: 70px;
+}
 .eliment1 th, .eliment2 th, .eliment3 th{
     font-size: 15px;
 }
@@ -92,6 +95,14 @@ td{
 .date p{
     margin:0;
 }
+.content{
+    height:550px;
+    background-image: url('data/cat1-1.PNG');
+    background-position: center;
+    background-size: 600px;
+    background-repeat: no-repeat;
+
+}
 .gameimg{
     height:400px;
 }
@@ -104,4 +115,38 @@ td{
     border: solid rgba(255,150,0,0.0) 5px;
     border-radius: 1em;
     background-color:rgba(255, 255, 255, 0.5);
+}
+
+.commu1{
+}
+
+
+.quest{
+    margin: 0;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 30px;
+}
+.answer{
+    height: 100px;
+    margin: 30px;
+}
+.answer tr td{
+    background-color:rgba(0,0,0,0);
+    width: 400px;
+}
+.answer tr td button{
+    font-size: 25px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.answer tr td button:hover{
+    color:rgba(255,150,0,1);
+}
+
+.result1{
+    font-size:30px;
+    margin:auto;
+    display:none;
 }
