@@ -58,8 +58,24 @@ function setup(){
 }
 
 function draw(){
-    createCanvas(100,010);
+    createCanvas(100,100);
 }
+startBtn.addEventListener('mouseover',function(event){
+    title_img.style.display="none";
+    title_img2.style.display="block";
+},false)
+startBtn.addEventListener('mouseout',function(event){
+    title_img2.style.display="none";
+    title_img.style.display="block";
+},false)
+howToBtn.addEventListener('mouseover',function(event){
+    title_img.style.display="none";
+    title_img2.style.display="block";
+},false)
+howToBtn.addEventListener('mouseout',function(event){
+    title_img2.style.display="none";
+    title_img.style.display="block";
+},false)
 function startGame(){
     mainpage.style.display="none";
     gamepage.style.display="block";
