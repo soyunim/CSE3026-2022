@@ -477,6 +477,11 @@ function backScript1(){
 }
 function re(){
     resultpage.style.display="none";
+    resultSection1.style.display="none";
+    resultSection2.style.display="none";
+    resultSection3.style.display="none";
+    resultSection4.style.display="none";
+    resultSection5.style.display="none";
     mainpage.style.display="block";
     day=1;
     date.innerHTML=day;
