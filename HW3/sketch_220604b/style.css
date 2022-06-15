@@ -3,7 +3,6 @@
     src: url(data/neodgm.ttf);
   }
 *{
-
     font-family:Font;
 }
 body { 
@@ -63,12 +62,72 @@ body {
     font-size: 45px;
 }
 .startBtn:hover, .howToBtn:hover{
-    color:rgba(255,150,0,1);
+    color:rgba(255,130,0,1);
 }
-.howToBtn{
-
+.howto_{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+.howto_ p{
+    font-size:20px;
+    margin:10px auto;
+}
+.howtotitle{
+    font-size:35px!important;
+    margin-top:80px!important;
+    margin-bottom:40px!important;
+}
+.point{
+    font-size:25px!important;
+    color:rgb(255, 140, 0);
+}
+.howtoNext{
+    cursor:pointer;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: rgba(146, 146, 146, 0.7);
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    margin-top:50px;
+}
+.howtoNext:hover{
+    color:rgb(255, 164, 66);
+}
+.startBtn2{
+    cursor:pointer;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: rgba(146, 146, 146, 0.7);
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+    margin-top:150px;
+}
+.startBtn2:hover{
+    color:rgba(255,130,0,1);
+}
+.howto_2{
+    display:none;
+}
+.howto_2 div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.howto_2 p{
+    font-size:25px;
+    margin:0;
+    margin-top:150px;
+}
+.howtotitle2{
+    margin:0!important;
+    font-size:35px!important;
 
+    margin-top: 190px!important;
+}
 /* game */
 .header{
     height:60px;
@@ -81,12 +140,15 @@ body {
 .header table{
     height: 70px;
 }
-.eliment1 th, .eliment2 th, .eliment3 th{
+.element1 th, .element2 th, .element3 th{
     font-size: 15px;
 }
 td{
     width: 10px;
-    background: black;
+    background: rgb(255,  200, 0);
+}
+.element3 td{
+    background: rgb(255, 10, 0);
 }
 .date{
     font-size: 30px;
@@ -97,7 +159,7 @@ td{
 }
 .content{
     height:550px;
-    background-image: url('data/cat1-1.PNG');
+    /* background-image: url('data/cat1-1.PNG'); */
     background-position: center;
     background-size: 600px;
     background-repeat: no-repeat;
@@ -105,8 +167,16 @@ td{
 }
 .gameimg{
     height:400px;
+    display:flex;
+    justify-content: center;
 }
-.communication{
+.gameimg img{
+    height:470px
+}
+.angryimg, .happyimg, .sadimg{
+    display:none;
+}
+.script{
     display:flex;
     justify-content: center;
     margin:auto;
@@ -117,15 +187,24 @@ td{
     background-color:rgba(255, 255, 255, 0.5);
 }
 
-.commu1{
+.script0{
+    margin:auto;
 }
-
-
+.script1, .script2, .script3, .script4, .script5, .script6, .script7, .script8, .script9, .script10, .script11{
+    display:none;
+}
+.startquest{
+    text-align: center;
+    font-size: 35px;
+}
 .quest{
     margin: 0;
     text-align: center;
     font-size: 35px;
-    margin-top: 30px;
+    margin-top: 50px;
+}
+.ans0{
+    margin: 0 250px;
 }
 .answer{
     height: 100px;
@@ -135,18 +214,79 @@ td{
     background-color:rgba(0,0,0,0);
     width: 400px;
 }
-.answer tr td button{
+.answer tr td button, .script0 button, .nextScript{
     font-size: 25px;
     border: none;
     background: none;
     cursor: pointer;
 }
-.answer tr td button:hover{
+.answer tr td button:hover, .script0 button:hover, .nextScript:hover{
     color:rgba(255,150,0,1);
 }
-
-.result1{
+.resultquest{
+    margin-bottom:10px;
+}
+.resultquest2{
+    margin-top:10px;
+    font-size: 20px;
+    color: rgba(255,180,0,1);
+}
+.resultquest3{
+    margin-top:10px;
+    font-size: 20px;
+    color: rgba(255,80,0,1);
+}
+.result{
+    text-align:center;
+}
+.result1, .result2, .result3, .result4, .eachresult1, .eachresult2, .eachresult3, .eachresult4{
     font-size:30px;
     margin:auto;
     display:none;
+}
+.nextScript{
+    color:gray;
+    margin:0 400px;
+}
+
+.resultSection1, .resultSection2, .resultSection3, .resultSection4, .resultSection5{
+    display:none;
+    text-align:center;
+}
+.resultSection1 div, .resultSection2 div, .resultSection3 div,
+.resultSection4 div, .resultSection5 div{
+    height:160px;
+}
+.resultSection1 section,.resultSection2 section,.resultSection3 section,
+.resultSection4 section,.resultSection5 section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultSection1 p,.resultSection2 p,.resultSection3 p,
+.resultSection4 p,.resultSection5 p{
+    margin:0;
+    font-size:40px;
+    margin-bottom:30px;
+}
+.resultSection1 section img,
+.resultSection2 section img,
+.resultSection3 section img,
+.resultSection4 section img,
+.resultSection5 section img{
+    height:300px;
+}
+.rebtn{
+    cursor:pointer;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: rgb(75, 75, 75);
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    margin-top: 30px;
+}
+.rebtn:hover{
+    color:rgba(255,130,0,1);
 }

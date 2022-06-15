@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
-  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
   <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
 
   <link href="style.css" rel="stylesheet" />
@@ -15,20 +14,39 @@
   <div id="container">
     <section id="main">
       <p class="title">찌짐이 키우기</p>
-      <img src="data/cat1.png" class="title_img">
-      <img src="data/cat1-1.png" class="title_img2">
+      <img src="data/cat1.PNG" class="title_img">
+      <img src="data/cat1-1.PNG" class="title_img2">
       <div class="mainBtn">
-        <button onclick="begin()" class="startBtn">게임시작</button>
-        <button onclick="howToPlay()" class="howToBtn">게임방법</button>  
+        <button class="startBtn" onclick="startGame();">게임시작</button>
+        <button class="howToBtn" onclick="howToPlay();">게임방법</button>  
       </div>
     </section>
 
     <section id="howto">
       <section class="howto_">
+        <p class="howtotitle">-스토리-</p>
+        <p>어느 날 펫샵 앞을 지나던 당신,<br>
+        펫샵을 끔찍히 싫어하지만</p>
+        <p class="point">'고양이 무료 분양합니다'</p>
+        <p>라는 글귀를 보곤 펫샵을 방문하게 된다.</p>
 
+        <p><br>그곳에서 귀여운 하얀 고양이를 보고 한눈에 반한 당신,<br>
+        고양이 역시 자신을 데려가라는 듯<br>
+        당신의 가슴에 냐옹-하며 안긴다.</p>
+
+        <p><br>4개월이 지나 팔리지 않는다는다며<br>
+        하얀 고양이를 무료로 데려가라는 펫샵 주인.</p>
+
+        <p><br>당신은 그렇게 하얀 고양이와 함께 집에 돌아오게 되었다.</p>
+        
+        <p class="point"><br>"오늘부터 네 이름은 찌짐이야.<br>
+        우리 같이 한 번 잘 지내보자!"</p>
+        <button class="howtoNext" onclick="howtoNext();">다음</button>
       </section>
-      <section>
-        <button onclick="begin2()" class="startBtn2">게임시작</button>
+      <section class="howto_2">
+        <div><p class="howtotitle2">-게임방법-</p>
+        <p>찌짐이가 집고양이로서 행복한 삶을 보낼 수 있게 도와주세요!</p>
+        <button class="startBtn2" onclick="startGame2();">STARTGAME</button></div>
       </section>
     </section>
 
@@ -40,7 +58,7 @@
         <section class="header">
 <!-- feeling eliments -->
           <table>
-            <tr class="eliment1">
+            <tr class="element1">
               <th>친밀감</th>
               <td></td>
               <td></td>
@@ -53,8 +71,8 @@
               <td></td>
               <td></td>
             </tr>
-            <tr class="eliment2">
-              <th>외로움</th>
+            <tr class="element2">
+              <th>행복함</th>
               <td></td>
               <td></td>
               <td></td>
@@ -66,18 +84,8 @@
               <td></td>
               <td></td>
             </tr>
-            <tr class="eliment3">
-              <th>기쁨</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+            <tr class="element3">
+              <th>외로움</th>
             </tr>
           </table>
           <div class="date">
@@ -86,40 +94,263 @@
         </section>
         <section class="content">
           <section class="gameimg">
+            <img class="angryimg" src="data/angry.png" style="width:500px;"/>
+            <img class="happyimg" src="data/happy.png" style="width:500px;"/>
+            <img class="sadimg" src="data/sad.png" style="width:500px;"/>
+            <img class="nothingimg" src="data/nothing.png" style="width:500px;"/>
           </section>
-<!-- communication -->
-          <section class="communication">
-            
-            <section class="commu1">
-              <p class="quest">question1</p>
+<!-- script -->
+          <section class="script">
+            <section class="script0">
+              <p class="startquest">안녕 난 찌짐이라고 해. 잘 부탁해 집사!</p>
+              <button class="ans0" onclick="goScript1();">나도 잘 부탁해!</button>
+            </section>
+<!-- question -->
+    <!-- 기본질문 -->
+            <section class="script1">
+              <p class="quest">"집사야 오늘은 뭐할까?"</p>
               <table class="answer">
                 <tr>
-                  <td><button class="ans1">this is test</button></td>
-                  <td><button class="ans2">this is test 2222</button></td>
+                  <td><button class="ans1" onclick="goResult1();">같이 산책가자!</button></td>
+                  <td><button class="ans2" onclick="goResult2();">혼자 알아서 놀면 안돼?</button></td>
                 </tr>
                 <tr>
-                  <td><button class="ans3">this is test33</button></td>
-                  <td><button class="ans4">this is test 44444</button></td>
+                  <td><button class="ans3" onclick="goResult3();">장난감가지고 놀자~</button></td>
+                  <td><button class="ans4" onclick="goResult4();">오늘은 약속 있어서 너랑 못놀아</button></td>
                 </tr>
               </table>
             </section>
-            
-            
-            
-            <section class="result1">
-              <p>This Is The Test</p>
+    <!-- 날짜별 질문 -->
+            <section class="script2">
+              <p class="quest">"집사는 내가 왜 좋아?"</p>
+              <table class="answer">
+                <tr>
+                  <td><button class="ans1" onclick="thisResult1();">좋다고 한 적 없는데?</button></td>
+                  <td><button class="ans2" onclick="thisResult2();">찌짐이는 귀엽고 사랑스러우니까!</button></td>
+                </tr>
+                <tr>
+                  <td><button class="ans3" onclick="thisResult3();">찌짐이도 나를 좋아하니까!</button></td>
+                  <td><button class="ans4" onclick="thisResult4();">(무시)</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="script3">
+              <p class="quest">"집사야 이것봐!"</p>
+              <table class="answer">
+                <tr>
+                  <td><button class="ans1" onclick="thisResult1();">나 지금 바빠. 나중에.</button></td>
+                  <td><button class="ans2" onclick="thisResult2();">우와 우리 찌짐이 대단한걸?!</button></td>
+                </tr>
+                <tr>
+                  <td><button class="ans3" onclick="thisResult3();">아이구 귀여운 우리 찌짐이♥</button></td>
+                  <td><button class="ans4" onclick="thisResult4();">(무시)</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="script4">
+              <p class="quest">"집사야 같이 놀자!"</p>
+              <table class="answer">
+                <tr>
+                  <td><button class="ans1" onclick="thisResult1();">바쁘니까 나중에 놀자.</button></td>
+                  <td><button class="ans2" onclick="thisResult2();">잡기놀이 하자!</button></td>
+                </tr>
+                <tr>
+                  <td><button class="ans3" onclick="thisResult3();">하루종일 같이 놀자!</button></td>
+                  <td><button class="ans4" onclick="thisResult4();">(무시)</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="script5">
+              <p class="quest">"집사가 젤 좋아!"</p>
+              <table class="answer">
+                <tr>
+                  <td><button class="ans1" onclick="thisResult1();">난 너 별로 안좋아해.</button></td>
+                  <td><button class="ans2" onclick="thisResult2();">찌짐이도? 나도!</button></td>
+                </tr>
+                <tr>
+                  <td><button class="ans3" onclick="thisResult3();">나도 찌짐이 제일 좋아!</button></td>
+                  <td><button class="ans4" onclick="thisResult4();">(무시)</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="script6">
+              <p class="quest">"집사야 간식줘!"</p>
+              <table class="answer">
+                <tr>
+                  <td><button class="ans1" onclick="thisResult1();">그만 먹어.</button></td>
+                  <td><button class="ans2" onclick="thisResult2();">찌짐이, 간식 먹으러 가자!</button></td>
+                </tr>
+                <tr>
+                  <td><button class="ans3" onclick="thisResult3();">(조용히 츄르를 짜준다.)</button></td>
+                  <td><button class="ans4" onclick="thisResult4();">(무시)</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="script7">
+              <p class="quest">"집사야 산책가자!"</p>
+              <table class="answer">
+                <tr>
+                  <td><button class="ans1" onclick="thisResult1();">귀찮아.</button></td>
+                  <td><button class="ans2" onclick="thisResult2();">좋아!</button></td>
+                </tr>
+                <tr>
+                  <td><button class="ans3" onclick="thisResult3();">(개모차를 꺼낸다.)</button></td>
+                  <td><button class="ans4" onclick="thisResult4();">(무시)</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="script8">
+              <p class="quest">"집사야 나 좀 봐봐"</p>
+              <table class="answer">
+                <tr>
+                  <td><button class="ans1" onclick="thisResult1();">찌짐아 조용히 해.</button></td>
+                  <td><button class="ans2" onclick="thisResult2();">우와 우리 찌짐이 대단한걸?!</button></td>
+                </tr>
+                <tr>
+                  <td><button class="ans3" onclick="thisResult3();">아이구 귀여운 우리 찌짐이♥</button></td>
+                  <td><button class="ans4" onclick="thisResult4();">(무시)</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="script9">
+              <p class="quest">"집사야 놀아줘!"</p>
+              <table class="answer">
+                <tr>
+                  <td><button class="ans1" onclick="thisResult1();">혼자 놀아.</button></td>
+                  <td><button class="ans2" onclick="thisResult2();">잡기놀이 하자!</button></td>
+                </tr>
+                <tr>
+                  <td><button class="ans3" onclick="thisResult3();">낚시놀이 하자!</button></td>
+                  <td><button class="ans4" onclick="thisResult4();">(무시)</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="script10">
+              <p class="quest">"집사야 나 잡아봐라~"</p>
+              <table class="answer">
+                <tr>
+                  <td><button class="ans1" onclick="thisResult1();">가만히 좀 있어.</button></td>
+                  <td><button class="ans2" onclick="thisResult2();">잡으러 간다 와아아악!!!</button></td>
+                </tr>
+                <tr>
+                  <td><button class="ans3" onclick="thisResult3();">(같이 우다다해준다.)</button></td>
+                  <td><button class="ans4" onclick="thisResult4();">(무시)</button></td>
+                </tr>
+              </table>
+            </section>
+            <section class="script11">
+              <p class="quest">"집사 옆에서 잘래"</p>
+              <table class="answer">
+                <tr>
+                  <td><button class="ans1" onclick="thisResult1();">고양이는 침대에 올라오면 안돼!</button></td>
+                  <td><button class="ans2" onclick="thisResult2();">좋아!</button></td>
+                </tr>
+                <tr>
+                  <td><button class="ans3" onclick="thisResult3();">그래 같이 자자!</button></td>
+                  <td><button class="ans4" onclick="thisResult4();">(무시)</button></td>
+                </tr>
+              </table>
+            </section>
+<!-- result -->
+            <section class="result result1">
+              <p class="resultquest">너무 좋아!!</p>
+              <p class="resultquest2">친밀감+1, 행복함+1, 외로움-1</p>
+              <p class="resultquest3"></p>
+              <button class="nextScript" onclick="nextDay();">다음으로</button>
+            </section>
+            <section class="result result2">
+              <p class="resultquest">나는 그냥 집사랑 놀고 싶었을 뿐이라구</p>
+              <p class="resultquest2"></p>
+              <p class="resultquest3">친밀감-1</p>
+              <button class="nextScript" onclick="nextDay();">다음으로</button>
+            </section>
+            <section class="result result3">
+              <p class="resultquest">꼭 잡고 말거야!</p>
+              <p class="resultquest2">친밀감+1, 외로움-1</p>
+              <p class="resultquest3"></p>
+              <button class="nextScript" onclick="nextDay();">다음으로</button>
+            </section>
+            <section class="result result4">
+              <p class="resultquest">혼자 있기 싫은데..</p>
+              <p class="resultquest2"></p>
+              <p class="resultquest3">행복함-1, 외로움+1</p>
+              <button class="nextScript" onclick="nextDay();">다음으로</button>
             </section>
 
+            <section class="result eachresult1">
+              <p class="resultquest">집사는 말을 왜 그렇게 해?</p>
+              <p class="resultquest2"></p>   
+              <p class="resultquest3">친밀감 -1, 외로움+1</p>
+              <button class="nextScript" onclick="backScript1();">다음으로</button>
+            </section>
+            <section class="result eachresult2">
+              <p class="resultquest">나 지금 짱 행복해!</p>
+              <p class="resultquest2">행복함+1</p>
+              <p class="resultquest3"></p>
+              <button class="nextScript" onclick="backScript1();">다음으로</button>
+            </section>
+            <section class="result eachresult3">
+              <p class="resultquest">집사와 함께라서 너무 좋아!</p>
+              <p class="resultquest2">친밀감+1, 외로움-1</p>
+              <p class="resultquest3"></p>
+              <button class="nextScript" onclick="backScript1();">다음으로</button>
+            </section>
+            <section class="result eachresult4">
+              <p class="resultquest">집사는 내가 싫은가봐..</p>
+              <p class="resultquest2"></p>
+              <p class="resultquest3">친밀감-1, 행복함-1, 외로움+1</p>
+              <button class="nextScript" onclick="backScript1();">다음으로</button>
+            </section>
           </section>
         </section>
         
       </section>
     </section>
     <section id="result">
-
+      <section class="resultSection1">
+        <div></div>
+        <p>"이제부터 집사랑은 안녕이야. 잘 지내"</p>
+        <section>
+          <img class="lastimg1" src="data/0.png">
+          <button onclick="re();" class="rebtn">다시하기</button>
+        </section>
+      </section>
+      <section class="resultSection2">
+        <div></div>
+        <p>'분명 같이 있는데 혼자 있는 기분이야..'</p>
+        <section>
+          <img class="lastimg2"src="data/1.png">
+          <button onclick="re();" class="rebtn">다시하기</button>
+        </section>
+      </section>
+      <section class="resultSection3">
+        <div></div>
+        <p>"집사야 우리 좀 더 친해지자..!"</p>
+        <section>
+          <img class="lastimg3"src="data/2.png">
+          <button onclick="re();" class="rebtn">다시하기</button>
+        </section>
+      </section>
+      <section class="resultSection4">
+        <div></div>
+        <p>"집사야 앞으로도 친하게 지내자!"</p>
+        <section>
+          <img class="lastimg4" src="data/3.png">
+          <button onclick="re();" class="rebtn">다시하기</button>
+        </section>
+      </section>
+      <section class="resultSection5">
+        <div></div>
+        <p>"집사야 이제부터 나랑 평생 함께해♥"</p>
+        <section>
+          <img class="lastimg5" src="data/4.png">
+          <button onclick="re();" class="rebtn">다시하기</button>
+        </section>
+      </section>
     </section>
   </div>
-  <script language="javascript" type="text/javascript" src="sketch_220604b.js"></script>
   
+  <script language="javascript" type="text/javascript" src="sketch_220604b.js"></script>
+
 </body>
 </html>
